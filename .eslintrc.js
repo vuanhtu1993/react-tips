@@ -24,6 +24,8 @@ module.exports = {
     'react/no-multi-comp': 'off',
     'react/prefer-stateless-function': 'off',
     'react/no-unused-state': 0,
-    'react/require-default-props': 0
+    'react/require-default-props': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'no-undef': 0
   }
 };
