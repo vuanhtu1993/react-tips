@@ -2,7 +2,15 @@
   "name": "react-tip",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vuanhtu1993.github.io/react-tips",
   "dependencies": {
+    "bootstrap": "^4.1.1",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "gh-pages": "^1.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
@@ -11,6 +19,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "prettier": "prettier --single-quote --write",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --write",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
